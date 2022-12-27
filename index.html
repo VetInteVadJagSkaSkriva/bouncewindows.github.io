@@ -1,0 +1,19 @@
+<script>
+    function checkPopup(w) {
+        while(!w.focus) alert("PLEASE ALLOW POPUPS FOR THIS TO WORK!");
+    }
+    var math = 0;
+    var maxwindows = prompt("how many windows do you want?");
+    alert(maxwindows);
+    var time = prompt("how many miliseconds will there be between every window spawn");
+    document.title = "loading windows.......";
+    function gate() {
+        if(math >= maxwindows) {
+            return null;
+        } else {
+            math++;
+            return checkPopup(window.open('annoy.html','','HEIGHT=10,WIDTH=10'));
+        }
+    }
+    setInterval(gate, time);
+</script>
