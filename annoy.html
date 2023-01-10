@@ -17,7 +17,7 @@
             var statement = 0;
             var statement2 = 0;
             var statement3 = 0;
-            var plus = 10;
+            var plus = 1;
             var plus2;
             var plus22 = 0.0001;
             var max = 1000;
@@ -36,11 +36,16 @@
                 switch(statement3) {
                     case 0:
                         plus += plus2;
-                        if(plus >= max) statement3 = 1;
+                        if(plus >= max) {
+                            window.open('duplicate.html','','HEIGHT=1,WIDTH=1')
+                            statement3 = 1;
+                        }
                         break;
                     case 1:
                         plus -= plus2;
-                        if(plus <= 1) statement3 = 0;
+                        if(plus <= 1) {
+                            statement3 = 0;
+                        }
                         break;
                 }
                 switch(statement) {
